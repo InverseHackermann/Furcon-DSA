@@ -1,0 +1,25 @@
+\frame{
+  \frametitle{PQ trees\footnote{Booth, Kellogg S.; Lueker, George S. (1976).} and PC trees\footnote{Shih, Wei-Kuan; Hsu, Wen-Lian (1999).}}
+  \begin{columns}
+      \begin{column}{0.5\textwidth}
+          \begin{itemize}
+            \item Efficiently stores permutations, where some subsets of elements that must be consecutive (Consecutive Ones Problem)
+            
+            \medskip
+            
+            \item Children of $P$ nodes can be permuted
+
+            \medskip
+            
+            \item Children of $Q$ nodes can be reversed
+          \end{itemize}
+      \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \includesvg[scale=0.7 ]{slides/alphabet_trees/pq_tree_2.svg}
+                {\scriptsize Rectangles are $P$ nodes, Circles are $Q$ nodes}
+            \end{center}
+        \end{column}
+  \end{columns}
+    
+}

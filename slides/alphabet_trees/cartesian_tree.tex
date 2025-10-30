@@ -1,0 +1,27 @@
+\frame{
+  \frametitle{Cartesian Tree\footnote{Vuillemin, Jean (1980)}}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+    \begin{itemize}
+
+    \item Binary tree derived from a sequence of distinct numbers
+    
+    \medskip
+    
+    \item Take the smallest number as root, recursively build on left and right
+
+    \medskip
+    
+        \item Turns range minimum queries into lowest common ancestor queries, allowing for constant time $O(1)$ range minimum queries
+    \end{itemize}
+
+    {\tiny \texttt{https://commons.wikimedia.org/w/index.php?curid=6268498}}
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+        \begin{center}
+         \includesvg[scale=0.60]{slides/alphabet_trees/Cartesian_tree.svg}
+         \end{center}
+    \end{column}
+    \end{columns}
+    
+}

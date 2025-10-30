@@ -1,0 +1,17 @@
+\begin{tikzpicture}[every node/.style={node distance=1cm}]
+\node (x0) {$x$};
+\node (x1)[left=of x0] {$f(x)$};
+\node (x2)[below left=of x1] {$f(f(x))$};
+\node (s0)[below=of x2] {$f^s(x)$};
+\node (s1)[below right=of s0] {$f^{s+1}(x)$};
+\node (tm2)[above right=of s1] {$f^{t-2}(x)$};
+\node (tm1)[above left=of tm2] {$f^{t-1}(x)$};
+
+\draw[-{Latex[length=8pt]}] (x0) -- (x1);
+\draw[-{Latex[length=8pt]}] (x1) -- (x2);
+\draw[-{Latex[length=8pt]}] (x2) edge[dotted] (s0);
+\draw[-{Latex[length=8pt]}] (s0) -- (s1);
+\draw[-{Latex[length=8pt]}] (s1) edge[dotted] (tm2);
+\draw[-{Latex[length=8pt]}] (tm2) -- (tm1);
+\draw[-{Latex[length=8pt]}] (tm1) -- (s0);
+\end{tikzpicture}

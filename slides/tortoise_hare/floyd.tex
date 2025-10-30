@@ -1,0 +1,35 @@
+\subsection{Floyd's Algorithm}
+
+\frame{
+
+\frametitle{\secname: \subsecname}
+
+\begin{columns}
+\column{0.5\textwidth}
+
+\begin{itemize}
+\item<1-> Algorithm description
+\begin{itemize}
+\item<1-> Tortoise and hare start with\\$x_t:=x$ and $x_h:=x$.
+\item<1-> When tortoise computes $x_t:=f(x_t)$, hare computes $x_h:=f(f(x_h))$.
+\end{itemize}
+\item<2-> Algorithm analysis
+\begin{itemize}
+\item<2-> Eventually both tortoise and hare will enter the cycle
+\item<2-> When both are in the cycle, the hare will catch up to the tortoise
+\end{itemize}
+\item<3-> Used in Pollard's rho algorithm
+\begin{itemize}
+\item<3-> Pollard's kangaroo exists???
+\end{itemize}
+\end{itemize}
+
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\input{slides/tortoise_hare/cycle_figure}
+\end{figure}
+
+\end{columns}
+
+}

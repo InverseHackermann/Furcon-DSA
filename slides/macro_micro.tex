@@ -1,0 +1,52 @@
+\section{Macro-Micro Tree Decomposition}
+\frame{
+\frametitle{\secname}
+
+\colorlet{macro}{alerted text.fg}
+\definecolor{macroleaf}{HTML}{9900ff}
+\definecolor{micro}{HTML}{0000cc}
+
+\begin{columns}
+\column{0.6\textwidth}
+\begin{itemize}
+\item Node is {\color{micro}\emph{micro}} if it has less than $O(log(n))$ descendants (else {\color{macro}\emph{macro}})
+\item Node is {\color{macroleaf}\emph{macro leaf}} if it is macro and all its children are micro
+\item Subtree is \emph{microtree} if its parent is a macro leaf
+\item There are at most $O(n/\log(n))$ macro leaves
+\begin{itemize}
+\item Macro leaves have $O(\log(n))$ decendants, and do not share decendants
+\end{itemize}
+\item There are $O(n^{1/c})$ distinct microtree shapes 
+\begin{itemize}
+\item Tree shape count is exponential in node count
+\item Number of microtree nodes is logarithmic in $n$
+\item log and exp cancel out to $O(n^{1/c})$
+\end{itemize}
+\end{itemize}
+
+\column{0.4\textwidth}
+\begin{figure}
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw,very thick,minimum size=2em,node distance=1ex}]
+\node (13) [color=micro] {13};
+\node (14) [right=of 13,color=micro] {14};
+\path (13.north) -- node[above=1em,color=micro] (9) {9} (14.north);
+\node (8) [left=of 9,color=micro] {8};
+\node (10) [right=of 9,color=micro] {10};
+\node (11) [right=of 10,color=micro] {11};
+\node (12) [right=of 11,color=micro] {12};
+\path (8.north) -- node[above=1em,color=macroleaf] (5) {5} (9.north);
+\node (6) [above=1em of 11,color=macroleaf] {6};
+\node (7) [right=of 6,color=micro] {7};
+\node (2) [above=1em of 5,color=macro] {2};
+\path (6.north) -- node[above=1em,color=macro] (4) {4} (7.north);
+\path (2) -- node (3)[color=micro] {3} (4);
+\node (1) [above=1em of 3,color=macro] {1};
+
+\draw (1) -- (2) -- (5) -- (8) (5) -- (9) -- (13) (9) -- (14) (1) -- (3) (1) -- (4) -- (6) -- (10) (6) -- (11) (6) -- (12) (4) -- (7);
+\end{tikzpicture}
+\end{figure}
+
+\end{columns}
+
+}

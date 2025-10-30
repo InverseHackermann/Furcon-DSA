@@ -1,0 +1,21 @@
+\subsection{Odd/Even Trick}
+
+\frame{
+
+\frametitle{\secname: \subsecname}
+
+\[f(x)=a_0+a_1x+a_2x^2+\dots+a_{n-1}x^{n-1}\]
+\begin{gather*}
+\begin{alignedat}{3}
+\visible<2->{f_e(x)=\null&a_0 &+a_2&\only<5>{\alert}{x^2}&+a_4&\only<5>{\alert}{x^4}+\dots+a_{n-2}\only<5>{\alert}{x^{n-2}}}\\
+\visible<2->{f_o(x)=\null&a_1\only<3>{\alert}x&+a_3&\only<3>{\alert}x^3&+a_5&\only<3>{\alert}x^5+\dots+a_{n-1}\only<3>{\alert}x^{n-1}}\\
+\visible<4->{f_o(x)=x(&a_1 &+a_3&\only<5>{\alert}{x^2}&+a_5&\only<5>{\alert}{x^4}+\dots+a_{n-1}\only<5>{\alert}{x^{n-2}})}\\\\
+\visible<6->{g_e(y)=\null&a_0 &+a_2&y  &+a_4&y^2+\dots+a_{n-2}y^{n/2-1}}\\
+\visible<6->{g_o(y)=\null&a_1 &+a_3&y  &+a_5&y^2+\dots+a_{n-1}y^{n/2-1}}\\
+\end{alignedat}
+\\
+\visible<6->{f(x)=g_e(x^2)+xg_o(x^2)}
+\end{gather*}
+
+}
+

@@ -1,0 +1,37 @@
+\subsection{Multiplication}
+
+\frame{
+
+\frametitle{\secname: \subsecname}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[every node/.style={inner sep=0pt,minimum height=\baselineskip},node distance=0pt]
+\node (f) {$f(x)=\null$};
+\node (f0)[right=of f.base east,anchor=base west] {$3$};
+\node (f1)[right=of f0.base east,anchor=base west] {$\null+2x$};
+\node (f2)[right=of f1.base east,anchor=base west] {$\null-4x^2$};
+\node (f3)[right=of f2.base east,anchor=base west] {$\null+x^3$};
+\node (g)[below=3\baselineskip of f.base east,anchor=base east] {$g(x)=\null$};
+\node (g0)[below=3\baselineskip of f0.base east,anchor=base east] {$2$};
+\node (g1)[below=3\baselineskip of f1.base east,anchor=base east] {$\null-x$};
+\node (g2)[below=3\baselineskip of f2.base east,anchor=base east] {$\null+x^2$};
+\draw (f0.south) -- (g0.north);
+\draw (f0.south) -- (g1.north);
+\draw (f0.south) -- (g2.north);
+\draw (f1.south) -- (g0.north);
+\draw (f1.south) -- (g1.north);
+\draw (f1.south) -- (g2.north);
+\draw (f2.south) -- (g0.north);
+\draw (f2.south) -- (g1.north);
+\draw (f2.south) -- (g2.north);
+\draw (f3.south) -- (g0.north);
+\draw (f3.south) -- (g1.north);
+\draw (f3.south) -- (g2.north);
+\node (h) [below=2\baselineskip of g.base east,anchor=base east] {$h(x)=f(x)\cdot g(x)=\null$};
+\node [right=of h.base east,anchor=base west] {$6+x-7x^2+8x^3-5x^4+x^5$};
+\end{tikzpicture}
+\end{figure}
+
+\centering Multiplying two polynomials of degree $n$ by distributing takes $O(n^2)$ time
+}

@@ -1,0 +1,23 @@
+\subsection{Polynomial Interpolation/Evaluation}
+
+\frame{
+
+\frametitle{\secname: \subsecname}
+
+\begin{columns}
+\column{0.5\textwidth}
+
+\begin{itemize}
+\item For a set of $n$ points, there is a unique polynomial with degree less than $n$ that passes through all the points
+\item Evaluating the polynomial at $n$ different $x$ values to find these points typically takes $O(n^2)$ time
+\item If we choose the $x$ values cleverly, we can do better
+\end{itemize}
+
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\input{slides/fft/poly_graph}
+\end{figure}
+\end{columns}
+
+}

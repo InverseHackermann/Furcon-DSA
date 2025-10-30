@@ -1,0 +1,48 @@
+\subsection{\texorpdfstring{Inverse \fft?}{Inverse FFT?}}
+
+\frame{
+
+\frametitle{\secname: \subsecname}
+
+\begin{columns}
+\column{0.5\textwidth}
+
+\begin{itemize}
+\item<1-> Multiplying polynomials of degree $n$
+\begin{itemize}
+\item<1-> Distributing would take $O(n^2)$
+\item<1-> \fft{} takes $O(n\log n)$
+\item<1-> Pointwise multiplication takes $O(n)$
+\end{itemize}
+\item<2-> \fft{} is (approximately) its own inverse
+\begin{itemize}
+\item<2-> No proof here: not a math panel
+\item<2-> \ifft{} takes $O(n\log n)$
+\item<2-> The Anti-Furry Transform is just a Furry Transform in disguise :3
+\end{itemize}
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\begin{tikzpicture}[every node/.style={rectangle,align=center,outer sep=3pt}]
+\definecolor{slow}{HTML}{cc0000};
+\definecolor{fast}{HTML}{009900};
+\definecolor{faster}{HTML}{00cc00};
+\node[draw] (fgcoeff) {$f,g$\\coeff};
+\node[draw] (hcoeff) [below=4em of fgcoeff] {$h$\\coeff};
+\node[draw] (fgpts) [right=of fgcoeff] {$f,g$\\points};
+\node[draw] (hpts) [below=of fgpts,right=of hcoeff] {$h$\\points};
+\draw[-{Latex[length=8pt]}] (fgcoeff) -- node[left,align=right,color=slow] {Distributing\\$O(n^2)$} (hcoeff);
+\draw[-{Latex[length=8pt]}] (fgcoeff) -- node[below,align=center,color=fast] {\fft\\$O(n\log n)$} (fgpts);
+\draw[-{Latex[length=8pt]}] (fgpts) -- node[right,align=left,color=faster] {Pointwise\\multiplication\\$O(n)$} (hpts);
+\only<1>{
+\draw[-{Latex[length=8pt]}] (hcoeff) -- node[below,align=center,color=fast] {\fft\\$O(n\log n)$}(hpts);
+}
+\only<2->{
+\draw[{Latex[length=8pt]}-] (hcoeff) -- node[below,align=center,color=fast] {\ifft\\$O(n\log n)$}(hpts);
+}
+\end{tikzpicture}
+
+\end{columns}
+
+}

@@ -1,0 +1,23 @@
+\frame{
+  \frametitle{Zip tree\footnote{Tarjan, Robert E.; Levy, Caleb C.; Timmel, Stephen (2021-10-31).}}
+  \begin{columns}
+    \begin{column}{0.4\textwidth}
+    \begin{itemize}
+    \item Randomized BST with expected $O(\log n)$ depth! 
+
+    \medskip
+
+    \item Insert takes a section of the insertion path and unzips it into two children
+
+    \medskip
+
+    \item Delete takes the inner paths of the children and zips them together
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+        \begin{center}
+            \includegraphics[scale=0.12]{slides/alphabet_trees/Insert-delete-ziptree.jpeg}
+        \end{center}
+    \end{column}
+    \end{columns}
+}

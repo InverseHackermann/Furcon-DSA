@@ -1,0 +1,209 @@
+\section{Morse Code}
+
+\frame{
+\frametitle{\secname}
+
+\begin{columns}
+\column{0.7\textwidth}
+\begin{figure}
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw}]
+
+\colorlet{undef}{gray}
+
+\only<1-2>{
+\colorlet{hlfreq}{normal text.fg}
+}
+\only<3->{
+\colorlet{hlfreq}{alerted text.fg}
+}
+
+\begin{scope}[inner sep=0,minimum size=1.5ex,font=\tiny,node distance=0.2ex]
+\node (lllll)                              {5};
+\node (llllr) [right=of lllll]             {4};
+\node (lllrl) [right=of llllr,color=undef] {};
+\node (lllrr) [right=of lllrl]             {3};
+\node (llrll) [right=of lllrr,color=undef] {};
+\node (llrlr) [right=of llrll,color=undef] {};
+\node (llrrl) [right=of llrlr,color=undef] {};
+\node (llrrr) [right=of llrrl]             {2};
+\node (lrlll) [right=of llrrr,color=undef] {};
+\node (lrllr) [right=of lrlll,color=undef] {};
+\node (lrlrl) [right=of lrllr]             {+};
+\node (lrlrr) [right=of lrlrl,color=undef] {};
+\node (lrrll) [right=of lrlrr,color=undef] {};
+\node (lrrlr) [right=of lrrll,color=undef] {};
+\node (lrrrl) [right=of lrrlr,color=undef] {};
+\node (lrrrr) [right=of lrrrl]             {1};
+\node (rllll) [right=of lrrrr]             {6};
+\node (rlllr) [right=of rllll]             {=};
+\node (rllrl) [right=of rlllr]             {/};
+\node (rllrr) [right=of rllrl,color=undef] {};
+\node (rlrll) [right=of rllrr,color=undef] {};
+\node (rlrlr) [right=of rlrll,color=undef] {};
+\node (rlrrl) [right=of rlrlr,color=undef] {};
+\node (rlrrr) [right=of rlrrl,color=undef] {};
+\node (rrlll) [right=of rlrrr]             {7};
+\node (rrllr) [right=of rrlll,color=undef] {};
+\node (rrlrl) [right=of rrllr,color=undef] {};
+\node (rrlrr) [right=of rrlrl,color=undef] {};
+\node (rrrll) [right=of rrlrr]             {8};
+\node (rrrlr) [right=of rrrll,color=undef] {};
+\node (rrrrl) [right=of rrrlr]             {9};
+\node (rrrrr) [right=of rrrrl]             {0};
+\end{scope}
+
+\begin{scope}[inner sep=0,minimum size=1.3em,font=\normalsize]
+
+\path (lllll.north) -- node[above=1.2em,color=hlfreq] (llll) {H} (llllr.north);
+\path (lllrl.north) -- node[above=1.2em]              (lllr) {V} (lllrr.north);
+\path (llrll.north) -- node[above=1.2em]              (llrl) {F} (llrlr.north);
+\path (llrrl.north) -- node[above=1.2em,color=undef]  (llrr) { } (llrrr.north);
+\path (lrlll.north) -- node[above=1.2em,color=hlfreq] (lrll) {L} (lrllr.north);
+\path (lrlrl.north) -- node[above=1.2em,color=undef]  (lrlr) { } (lrlrr.north);
+\path (lrrll.north) -- node[above=1.2em]              (lrrl) {P} (lrrlr.north);
+\path (lrrrl.north) -- node[above=1.2em]              (lrrr) {J} (lrrrr.north);
+\path (rllll.north) -- node[above=1.2em]              (rlll) {B} (rlllr.north);
+\path (rllrl.north) -- node[above=1.2em]              (rllr) {X} (rllrr.north);
+\path (rlrll.north) -- node[above=1.2em]              (rlrl) {C} (rlrlr.north);
+\path (rlrrl.north) -- node[above=1.2em]              (rlrr) {Y} (rlrrr.north);
+\path (rrlll.north) -- node[above=1.2em]              (rrll) {Z} (rrllr.north);
+\path (rrlrl.north) -- node[above=1.2em]              (rrlr) {Q} (rrlrr.north);
+\path (rrrll.north) -- node[above=1.2em,color=undef]  (rrrl) { } (rrrlr.north);
+\path (rrrrl.north) -- node[above=1.2em,color=undef]  (rrrr) { } (rrrrr.north);
+
+\path (llll.north) -- node[above=1.2em,color=hlfreq] (lll) {S} (lllr.north);
+\path (llrl.north) -- node[above=1.2em]              (llr) {U} (llrr.north);
+\path (lrll.north) -- node[above=1.2em,color=hlfreq] (lrl) {R} (lrlr.north);
+\path (lrrl.north) -- node[above=1.2em]              (lrr) {W} (lrrr.north);
+\path (rlll.north) -- node[above=1.2em,color=hlfreq] (rll) {D} (rllr.north);
+\path (rlrl.north) -- node[above=1.2em]              (rlr) {K} (rlrr.north);
+\path (rrll.north) -- node[above=1.2em]              (rrl) {G} (rrlr.north);
+\path (rrrl.north) -- node[above=1.2em,color=hlfreq] (rrr) {O} (rrrr.north);
+
+\path (lll.north) -- node[above=1.2em,color=hlfreq] (ll) {I} (llr.north);
+\path (lrl.north) -- node[above=1.2em,color=hlfreq] (lr) {A} (lrr.north);
+\path (rll.north) -- node[above=1.2em,color=hlfreq] (rl) {N} (rlr.north);
+\path (rrl.north) -- node[above=1.2em]              (rr) {M} (rrr.north);
+
+\path (ll.north) -- node[above=1.2em,color=hlfreq] (l) {E} (lr.north);
+\path (rl.north) -- node[above=1.2em,color=hlfreq] (r) {T} (rr.north);
+
+\path (l.north) -- node[above=1.2em] (s) {start} (r.north);
+
+\draw (s) edge[dotted,thick] (l);
+\draw (s) edge[dashed,thick] (r);
+
+\draw (l) edge[dotted,thick] (ll);
+\draw (l) edge[dashed,thick] (lr);
+\draw (r) edge[dotted,thick] (rl);
+\draw (r) edge[dashed,thick] (rr);
+
+\draw (ll) edge[dotted,thick] (lll);
+\draw (ll) edge[dashed,thick] (llr);
+\draw (lr) edge[dotted,thick] (lrl);
+\draw (lr) edge[dashed,thick] (lrr);
+\draw (rl) edge[dotted,thick] (rll);
+\draw (rl) edge[dashed,thick] (rlr);
+\draw (rr) edge[dotted,thick] (rrl);
+\draw (rr) edge[dashed,thick] (rrr);
+
+\draw (lll) edge[dotted,thick] (llll);
+\draw (lll) edge[dashed,thick] (lllr);
+\draw (llr) edge[dotted,thick] (llrl);
+\draw (llr) edge[dashed,thick] (llrr);
+\draw (lrl) edge[dotted,thick] (lrll);
+\draw (lrl) edge[dashed,thick] (lrlr);
+\draw (lrr) edge[dotted,thick] (lrrl);
+\draw (lrr) edge[dashed,thick] (lrrr);
+\draw (rll) edge[dotted,thick] (rlll);
+\draw (rll) edge[dashed,thick] (rllr);
+\draw (rlr) edge[dotted,thick] (rlrl);
+\draw (rlr) edge[dashed,thick] (rlrr);
+\draw (rrl) edge[dotted,thick] (rrll);
+\draw (rrl) edge[dashed,thick] (rrlr);
+\draw (rrr) edge[dotted,thick] (rrrl);
+\draw (rrr) edge[dashed,thick] (rrrr);
+
+\draw (llll) edge[dotted,thick] (lllll);
+\draw (llll) edge[dashed,thick] (llllr);
+\draw (lllr) edge[dotted,thick] (lllrl);
+\draw (lllr) edge[dashed,thick] (lllrr);
+\draw (llrl) edge[dotted,thick] (llrll);
+\draw (llrl) edge[dashed,thick] (llrlr);
+\draw (llrr) edge[dotted,thick] (llrrl);
+\draw (llrr) edge[dashed,thick] (llrrr);
+\draw (lrll) edge[dotted,thick] (lrlll);
+\draw (lrll) edge[dashed,thick] (lrllr);
+\draw (lrlr) edge[dotted,thick] (lrlrl);
+\draw (lrlr) edge[dashed,thick] (lrlrr);
+\draw (lrrl) edge[dotted,thick] (lrrll);
+\draw (lrrl) edge[dashed,thick] (lrrlr);
+\draw (lrrr) edge[dotted,thick] (lrrrl);
+\draw (lrrr) edge[dashed,thick] (lrrrr);
+\draw (rlll) edge[dotted,thick] (rllll);
+\draw (rlll) edge[dashed,thick] (rlllr);
+\draw (rllr) edge[dotted,thick] (rllrl);
+\draw (rllr) edge[dashed,thick] (rllrr);
+\draw (rlrl) edge[dotted,thick] (rlrll);
+\draw (rlrl) edge[dashed,thick] (rlrlr);
+\draw (rlrr) edge[dotted,thick] (rlrrl);
+\draw (rlrr) edge[dashed,thick] (rlrrr);
+\draw (rrll) edge[dotted,thick] (rrlll);
+\draw (rrll) edge[dashed,thick] (rrllr);
+\draw (rrlr) edge[dotted,thick] (rrlrl);
+\draw (rrlr) edge[dashed,thick] (rrlrr);
+\draw (rrrl) edge[dotted,thick] (rrrll);
+\draw (rrrl) edge[dashed,thick] (rrrlr);
+\draw (rrrr) edge[dotted,thick] (rrrrl);
+\draw (rrrr) edge[dashed,thick] (rrrrr);
+
+\end{scope}
+\end{tikzpicture}
+
+\end{figure}
+
+\column{0.3\textwidth}
+
+\visible<2->{
+\begin{figure}
+% Lewand, Robert (2000). Cryptological Mathematics. Mathematical Association of America. p. 36. ISBN 978-0883857199. and "English letter frequencies". Archived from the original on 2008-07-08. Retrieved 2008-06-25.
+% https://web.archive.org/web/20080708193159/http://pages.central.edu/emp/LintonT/classes/spring01/cryptography/letterfreq.html
+\begin{tabular}{|c|r|}
+\hline
+Letter & Frequency\\
+\hline
+E & 12.7\% \\
+T & 9.1\% \\
+A & 8.2\% \\
+O & 7.5\% \\
+I & 7.0\% \\
+N & 6.7\% \\
+S & 6.3\% \\
+H & 6.1\% \\
+R & 6.0\% \\
+D & 4.3\% \\
+L & 4.0\% \\
+\hline
+% C & 2.8\% \\
+% U & 2.8\% \\
+% M & 2.4\% \\
+% W & 2.4\% \\
+% F & 2.2\% \\
+% G & 2.0\% \\
+% Y & 2.0\% \\
+% P & 1.9\% \\
+% B & 1.5\% \\
+% V & 1.0\% \\
+% K & 0.8\% \\
+% J & 0.2\% \\
+% X & 0.2\% \\
+% Q & 0.1\% \\
+% Z & 0.1\%
+\end{tabular}
+\end{figure}
+}
+
+\end{columns}
+
+}

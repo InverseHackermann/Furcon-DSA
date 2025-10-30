@@ -1,0 +1,25 @@
+\subsection{Divide and Conquer}
+
+\frame{
+
+\frametitle{\secname: \subsecname}
+
+\begin{alignat*}{4}
+f(x)&=a_0&&+a_1x&&+a_2x^2+\dots&&+a_{n-1}x^{n-1}=g_e(x^2)+xg_o(x^2)\\
+g_e(y)&=a_0&&+a_2y&&+a_4y^2+\dots&&+a_{n-2}y^{n/2-1}\\
+g_o(y)&=a_1&&+a_3y&&+a_5y^2+\dots&&+a_{n-1}y^{n/2-1}
+\end{alignat*}
+
+\begin{itemize}
+\item We need to evaluate $g_e$ and $g_o$ at $y=x^2=$
+\begin{align*}
+(1)^2&,&(r)^2&,&(r^2)^2&,\dots,&(r^{n/2-1})^2&,&(r^{n/2})^2&,&(r^{n/2+1})^2&,\dots,&(r^{n-1})^2\\
+\WhenNotMeasuring{\pause}
+1&,&r^2&,&r^4&,\dots,&r^{n-2}&,&r^n=1&,&r^2&,\dots,&r^{n-2}
+\end{align*}
+\pause
+\item To evaluate $f$ at $n$ roots of unity, we evaluate $g_e$ and $g_o$ at $n/2$ roots of unity
+\item Recursion! $T(n)=2T(n/2)+O(n)=O(n\log n)$
+
+\end{itemize}
+}

@@ -1,0 +1,49 @@
+\section{Gray Code}
+
+\frame{
+\frametitle{\secname}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.75\textheight]{slides/gray_code/gray_himakar.jpeg}
+
+    Gray Himakar
+\end{figure}
+}
+
+
+\frame{
+\frametitle{\secname}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{itemize}
+\item<1-> Normal counting can have many digits change when going to the next value
+\begin{itemize}
+\item<1-> Physical switches changing might not be simultaneous
+\end{itemize}
+\item<2-> Binary reflected gray code (BRGC): to add a bit, reflect existing sequence, give one half a 0, and the other half a 1
+\item<7-> There are cool bit hacks for computing the next BRGC value and converting between binary and BRGC
+\item<7-> There are also variants that balance the number of transitions per bit
+\end{itemize}
+
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Binary & \visible<2->{BRGC} \\
+\hline
+000 & \visible<6->{\alert<6>{0}}\visible<4->{\alert<4>{0}}\visible<2->{0} \\
+001 & \visible<6->{\alert<6>{0}}\visible<4->{\alert<4>{0}}\visible<2->{1} \\
+010 & \visible<6->{\alert<6>{0}}\visible<4->{\alert<4>{1}}\visible<3->{\alert<3>{1}} \\
+011 & \visible<6->{\alert<6>{0}}\visible<4->{\alert<4>{1}}\visible<3->{\alert<3>{0}} \\
+100 & \visible<6->{\alert<6>{1}}\visible<5->{\alert<5>{1}}\visible<5->{\alert<5>{0}} \\
+101 & \visible<6->{\alert<6>{1}}\visible<5->{\alert<5>{1}}\visible<5->{\alert<5>{1}} \\
+110 & \visible<6->{\alert<6>{1}}\visible<5->{\alert<5>{0}}\visible<5->{\alert<5>{1}} \\
+111 & \visible<6->{\alert<6>{1}}\visible<5->{\alert<5>{0}}\visible<5->{\alert<5>{0}} \\
+\hline
+\end{tabular}
+\end{figure}
+
+\end{columns}
+
+}
