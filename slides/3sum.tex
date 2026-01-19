@@ -1,0 +1,18 @@
+\section{3SUM-Hardness}
+\frame{
+\frametitle{\secname}
+
+\begin{itemize}
+\item<1-> 3SUM: given $n$ numbers, can you find 3 that sum to 0?
+\item<1-> Solvable in $O(n^2)$ by hashing
+\item<1-> Assumed to not have a (significantly) faster solution
+\item<1-> Some problems are at least as hard to solve as 3SUM, and are called 3SUM-hard
+\begin{itemize}
+\item<1-> Given lines in a plane, do any 3 intersect at a point?
+\item<1-> Given triangles in a plane, does their union have a hole?
+\end{itemize}
+\item<1-> Proof says, for any 3SUM instance, do some fast algorithm to transform into a 3SUM-hard instance whose solution matches the orignal problem
+\item<2-> Note: If numbers are integers in $[-N,N]$, solvable in $O(n+N\log N)$ via FFT
+\end{itemize}
+
+}
