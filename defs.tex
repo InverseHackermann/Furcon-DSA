@@ -9,6 +9,9 @@
 \usepackage{tikz}
 \usepackage{ulem}
 \usepackage{wrapfig}
+% \usepackage{setspace} %breaks in beamer??? TwT
+
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{0.5em}}{\enditemize}
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{fit}

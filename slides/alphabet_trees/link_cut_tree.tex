@@ -1,25 +1,22 @@
+\subsection{}
 \frame{
   \begin{center}
-  \includegraphics[scale=0.42]{slides/alphabet_trees/link_cut_tree.png}
+  \includegraphics[scale=0.36]{slides/alphabet_trees/link_cut_tree.png}
   \end{center}
 }
-
+\subsection{Link-Cut Tree}
 \frame{
-  \frametitle{Link-Cut Tree\footnote{Sleator, D. D.; Tarjan, R. E. (1983).}}
+  \frametitle{\subsecname\footnote{Sleator, D. D.; Tarjan, R. E. (1983).}}
   \begin{columns}
       \begin{column}{0.4\textwidth}
-          \begin{itemize}
+          \begin{wideitemize}
                   \item Maintains a set of rooted trees
 
-                    \medskip
                   
                     \item Amortized $O(\log n)$ link, cut and find-root at any node
-
-                    \medskip
-                    
                     
                     \item Improves Dinic's Algorithm (for max-flow) from $O(V^2E)$ to $O(VE \log V)$.
-          \end{itemize}
+          \end{wideitemize}
       \end{column}
         \begin{column}{0.6\textwidth}
             \includegraphics[scale=0.6]{slides/alphabet_trees/Linkcuttree1.png}

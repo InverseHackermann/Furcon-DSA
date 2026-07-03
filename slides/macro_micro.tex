@@ -1,28 +1,7 @@
-\section{Macro-Micro Tree Decomposition}
-
+\subsection{Macro-Micro Tree Decomposition}
 \frame{
-\frametitle{Tree Decomposition}
-    \begin{columns}
-\column{0.4\textwidth}
-\begin{itemize}
-    \item Breaks down a rooted tree into smaller subparts to more efficiently solve subproblems
-    \item Heavy-Light Decomposition 
-    \begin{itemize}
-        \item Separates edges into heavy ($\geq 1/2$ subtree size) and light ($< 1/2$ subtree size).
-        \item Every path from root to leaf contains $\leq log_2(n)$ light edges.
-    \end{itemize}
-\end{itemize}
-\column{0.6\textwidth}
-    \centering
-    \includegraphics[scale=0.2]{slides/tree-decomp/heavy-light-decomposition-hld-0-1636267006.png}
-  {\tiny \texttt{https://www.naukri.com/code360/library/heavy-light-decomposition-hld}}
-    
-\end{columns}
-    
-}
-
-\frame{
-\frametitle{\secname}
+% \frametitle{\secname}
+\frametitle{\subsecname}
 
 \colorlet{macro}{alerted text.fg}
 \definecolor{macroleaf}{HTML}{9900ff}
@@ -30,7 +9,7 @@
 
 \begin{columns}
 \column{0.6\textwidth}
-\begin{itemize}
+\begin{wideitemize}
 \item Node is {\color{micro}\emph{micro}} if it has less than $O(log(n))$ descendants (else {\color{macro}\emph{macro}})
 \item Node is {\color{macroleaf}\emph{macro leaf}} if it is macro and all its children are micro
 \item Subtree is \emph{microtree} if its parent is a macro leaf
@@ -40,11 +19,12 @@
 \end{itemize}
 \item There are $O(n^{1/c})$ distinct microtree shapes 
 \begin{itemize}
-\item Tree shape count is exponential in node count
-\item Number of microtree nodes is logarithmic in $n$
-\item log and exp cancel out to $O(n^{1/c})$
+% \item Tree shape count is exponential in node count
+% \item Number of microtree nodes is logarithmic in $n$
+% \item log and exp cancel out to $O(n^{1/c})$
+\item Brute force on all microtree shapes
 \end{itemize}
-\end{itemize}
+\end{wideitemize}
 
 \column{0.4\textwidth}
 \begin{figure}

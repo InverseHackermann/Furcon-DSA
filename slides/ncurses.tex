@@ -1,0 +1,24 @@
+\section{nCurses}
+
+\frame{
+\frametitle{\secname}
+\begin{columns}
+\column{0.4\textwidth}
+\begin{figure}
+\centering
+xkcd 2347: Dependency
+
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=45mm]{slides/ncurses/dependency.png}};
+\only<2->{
+\node (label) at (3.7,4) {nCurses};
+\draw[->] (label) -- (3.5, 2.7);
+}
+\end{tikzpicture}
+\end{figure}
+\column{0.6\textwidth}%
+\only<2->{%
+\texttt{apt-cache rdepends --installed --recurse libncurses6 | less}
+}
+\end{columns}
+}
